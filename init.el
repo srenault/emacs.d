@@ -26,6 +26,11 @@
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
+(dolist
+    (project (directory-files (concat dotfiles-dir "elpa") t "\\w+"))
+  (when (file-directory-p project)
+    (add-to-list 'load-path project)))
+
 ;; Package management
 (require 'package)
 (add-to-list 'package-archives
