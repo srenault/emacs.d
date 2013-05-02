@@ -4,11 +4,6 @@
 (dolist (mode '(tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
 
-;; Always use UTF-8
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(prefer-coding-system 'utf-8)
-
 ;; Always ask for y/n keypress instead of typing out 'yes' or 'no'
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -36,26 +31,13 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
-;; Highlight current line
-(global-hl-line-mode 1)
-
-;; Encoding
-(setq locale-coding-system 'utf-8)
-(set-selection-coding-system 'utf-8)
-(prefer-coding-system 'utf-8)
-
-;; Indenting
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-
-;; Brace
-(show-paren-mode 1)
 
 ;; Push some bin to PATH
 ;(push "/Users/litig/bin/" exec-path)
 
 (setq sre-pkg-full
       '(sre-defuns
+        sre-editing
         sre-scala
         sre-whitespace
         sre-binding
