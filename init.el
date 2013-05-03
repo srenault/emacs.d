@@ -51,6 +51,7 @@
         sre-fuzzy
         sre-project
         sre-golden
+        sre-terminal
         sre-js))
 
 (dolist (file sre-pkg-full)
