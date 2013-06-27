@@ -53,7 +53,7 @@
         sre-golden
         sre-terminal
         sre-ack
-        sre-ensime
+        sre-slime
         sre-js))
 
 (dolist (file sre-pkg-full)

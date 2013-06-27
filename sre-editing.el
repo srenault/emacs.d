@@ -17,11 +17,6 @@
 ;; Brace
 (show-paren-mode 1)
 
-;; Autopair mode
-;(eval-after-load "autopair"
-;  '(setq autopair-pair-criteria 'help-balance))
-;(autopair-global-mode)
-
 ;; Multiple cursors!
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
