@@ -18,4 +18,14 @@
 
 (global-set-key "\M-Z" 'zap-up-to-char)
 
+(defun sre-tabs-to-tabs ()
+  "TABS is TABS."
+  (interactive)
+  (setq-default indent-tabs-mode t))
+
+(defun sre-tabs-as-spaces ()
+  "TABS is TABS."
+  (interactive)
+  (setq-default indent-tabs-mode nil))
+
 (provide 'sre-defuns)
