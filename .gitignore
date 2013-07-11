@@ -3,3 +3,6 @@
 elpa/
 site-lisp/
 themes/
+sre-secret.el
+request/curl-cookie-jar
+auto-save-list/.saves-93929-sre.local~

@@ -15,6 +15,8 @@
                     (or (buffer-file-name) load-file-name)))
 (add-to-list 'load-path dotfiles-dir)
 
+(add-to-list 'load-path (concat dotfiles-dir "utils"))
+
 ;; Add every subdirectory of ~/.emacs.d/site-lisp to the load path
 (dolist
     (project (directory-files (concat dotfiles-dir "site-lisp") t "\\w+"))
@@ -37,6 +39,7 @@
 
 (setq sre-pkg-full
       '(sre-defuns
+        sre-secret
         sre-editing
         sre-scala
         sre-whitespace
@@ -54,6 +57,7 @@
         sre-terminal
         sre-ack
         sre-slime
+        sre-cra
         sre-js))
 
 (dolist (file sre-pkg-full)
