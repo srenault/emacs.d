@@ -58,7 +58,9 @@
         sre-ack
         sre-slime
         sre-cra
+        sre-typescript
         sre-js))
 
 (dolist (file sre-pkg-full)
   (require file))
+(put 'narrow-to-region 'disabled nil)

@@ -15,7 +15,9 @@
 (setq-default tab-width 4)
 
 ;; Brace
-(show-paren-mode 1)
+(require 'mic-paren)
+(paren-activate)
+;(show-paren-mode 1)
 
 ;; Multiple cursors!
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
