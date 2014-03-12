@@ -3,6 +3,8 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        js2-insert-and-indent
+        kill-region
         smex
         undefined
         ))

@@ -10,16 +10,6 @@
       (interactive)
       (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
 
-(defun replace-tabs-by-spaces ()
-  "Replace tabs by spaces."
-  (interactive)
-  (replace-string "	" "    "))
-
-(defun replace-spaces-by-tabs ()
-  "Replace spaces by tabs."
-  (interactive)
-  (replace-string "...." "	"))
-
 (defun file-string (file)
     "Read the contents of a file and return as a string."
     (with-current-buffer (find-file-noselect file)
@@ -33,14 +23,14 @@
 
 (global-set-key "\M-Z" 'zap-up-to-char)
 
-(defun sre-tabs-as-tabs ()
-  "TABS as TABS."
-  (interactive)
-  (setq-default indent-tabs-mode t))
-
-(defun sre-tabs-as-spaces ()
-  "TABS as spaces."
-  (interactive)
-  (setq-default indent-tabs-mode nil))
+(defun join-region (beg end)
+  "Apply join-line over region."
+  (interactive "r")
+  (if mark-active
+          (let ((beg (region-beginning))
+                        (end (copy-marker (region-end))))
+                (goto-char beg)
+                (while (< (point) end)
+                  (join-line 1)))))
 
 (provide 'sre-defuns)

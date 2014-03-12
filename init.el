@@ -40,6 +40,7 @@
 (setq sre-pkg-full
       '(sre-defuns
         sre-secret
+        sre-erc
         sre-editing
         sre-scala
         sre-whitespace
@@ -51,9 +52,7 @@
         sre-ido
         sre-markdown
         sre-haskell
-        sre-fuzzy
         sre-project
-        sre-golden
         sre-terminal
         sre-ack
         sre-slime

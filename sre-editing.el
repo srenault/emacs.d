@@ -17,7 +17,7 @@
 ;; Brace
 (require 'mic-paren)
 (paren-activate)
-;(show-paren-mode 1)
+(show-paren-mode 1)
 
 ;; Multiple cursors!
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
@@ -25,5 +25,17 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-M-'") 'mc/mark-more-like-this-extended)
 (global-set-key (kbd "C-*") 'mc/mark-all-like-this-dwim)
+
+(require 'ace-jump-mode)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
+(defun iwb ()
+  "indent whole buffer"
+  (interactive)
+  (delete-trailing-whitespace)
+  (indent-region (point-min) (point-max) nil)
+  (untabify (point-min) (point-max)))
+
+(paredit-mode 1)
 
 (provide 'sre-editing)

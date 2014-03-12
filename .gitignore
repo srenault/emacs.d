@@ -6,3 +6,8 @@ themes/
 sre-secret.el
 request/curl-cookie-jar
 auto-save-list/.saves-93929-sre.local~
+*~
+ac-comphist.dat
+tramp
+tutorial/English.tut
+var/pcache/ucs-utils
