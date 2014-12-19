@@ -74,4 +74,7 @@
   (indent-region (point-min) (point-max) nil)
   (untabify (point-min) (point-max)))
 
+(require 'golden-ratio)
+(golden-ratio-mode 1)
+
 (provide 'sre-editing)
