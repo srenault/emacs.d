@@ -11,13 +11,50 @@
 (prefer-coding-system 'utf-8)
 
 ;; Indenting
-(setq-default indent-tabs-mode nil)
+(set-default 'indent-tabs-mode nil)
+(define-key global-map (kbd "RET") 'newline-and-indent)
 (setq-default tab-width 4)
+;; Javascript
+(setq-default js2-basic-offset 2)
+;; JSON
+(setq-default js-indent-level 2)
+;; Typescript
+(setq typescript-indent-level 2
+      typescript-expr-indent-offset 2)
+;; XML
+(setq-default nxml-child-indent 2)
+;; Default formatting style for C based modes
+(setq c-default-style "java")
+(setq-default c-basic-offset 2)
+(setq sentence-end-double-space nil)
+
+;; Enforce proper whitespace
+(package-require 'ethan-wspace)
+(global-ethan-wspace-mode 1)
 
 ;; Brace
 (require 'mic-paren)
 (paren-activate)
 (show-paren-mode 1)
+
+;;CTAGS
+(setq path-to-ctags "/opt/local/bin/ctags")
+(defun create-tags (dir-name)
+  "Create tags file."
+  (interactive "DDirectory: ")
+  (shell-command
+   (format "ctags -f %s -e -R %s" path-to-ctags (directory-file-name dir-name))))
+
+(custom-set-variables
+  '(ac-etags-requires 1))
+
+(eval-after-load "etags"
+  '(progn
+      (ac-etags-setup)))
+
+;;(ac-set-trigger-key "TAB")
+
+(add-hook 'scala-mode-hook 'ac-etags-ac-setup)
 
 ;; Multiple cursors!
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
@@ -35,7 +72,5 @@
   (delete-trailing-whitespace)
   (indent-region (point-min) (point-max) nil)
   (untabify (point-min) (point-max)))
-
-(paredit-mode 1)
 
 (provide 'sre-editing)

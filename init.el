@@ -31,7 +31,9 @@
 ;; Package management
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+            '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
+ (package-initialize)
 
 
 ;; Push some bin to PATH
@@ -48,18 +50,30 @@
         sre-extension
         sre-linum
         sre-dired
-        sre-theme
         sre-ido
         sre-markdown
         sre-haskell
-        sre-project
         sre-terminal
         sre-ack
-        sre-slime
         sre-cra
+        sre-hack
+        sre-theme
+        sre-autocomplete
         sre-typescript
         sre-js))
 
 (dolist (file sre-pkg-full)
   (require file))
 (put 'narrow-to-region 'disabled nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("9dae95cdbed1505d45322ef8b5aa90ccb6cb59e0ff26fef0b8f411dfc416c552" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "769bb56fb9fd7e73459dcdbbfbae1f13e734cdde3cf82f06a067439568cdaa95" "146d24de1bb61ddfa64062c29b5ff57065552a7c4019bee5d869e938782dfc2a" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

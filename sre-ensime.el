@@ -1,7 +1,6 @@
 ;; sre-ensime.el
 
 ;; load the ensime lisp code...
-(add-to-list 'load-path "~/site-lisp/ensime_2.10.0-0.9.8.9/elisp/")
 (require 'ensime)
 
 ;; This step causes the ensime-mode to be started whenever
