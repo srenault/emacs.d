@@ -2,6 +2,7 @@
 
 ;; Highlight current line
 (global-hl-line-mode 1)
+(setq column-number-mode t)
 
 ;; Always use UTF-8
 (setq locale-coding-system 'utf-8)
