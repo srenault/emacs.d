@@ -77,4 +77,7 @@
 (require 'golden-ratio)
 (golden-ratio-mode 1)
 
+(add-to-list 'load-path "~/site-lisp/helm-swoop")
+(require 'helm-swoop)
+
 (provide 'sre-editing)
