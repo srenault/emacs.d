@@ -1,5 +1,16 @@
 ;; sre-editing.el
 
+;; Save & restore opened files
+(desktop-save-mode 1)
+
+;; Enable { cut, copy, paste, Undo }
+(cua-mode 1)
+
+;; Stop creating backup~ files
+(setq make-backup-files nil)
+;; Stop creating #autosave# files
+(setq auto-save-default nil)
+
 ;; Highlight current line
 (global-hl-line-mode 1)
 (setq column-number-mode t)

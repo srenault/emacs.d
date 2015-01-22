@@ -5,7 +5,7 @@
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 
 (setq js2-cleanup-whitespace t)
-(setq-default js2-basic-offset 4)
+(setq-default js2-basic-offset 2)
 (setq js2-enter-indents-newline nil)
 (setq js2-indent-on-enter-key nil)
 (setq js2-mirror-mode nil)
