@@ -1,7 +1,12 @@
 ;; sre-editing.el
 
+(require 'helm-config)
+(global-set-key (kbd "C-c c") 'helm-swoop)
+
 ;; Save & restore opened files
 (desktop-save-mode 1)
+
+(setq x-select-enable-clipboard t)
 
 ;; Enable { cut, copy, paste, Undo }
 (cua-mode 1)
