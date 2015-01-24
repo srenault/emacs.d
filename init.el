@@ -72,6 +72,7 @@
         sre-theme
         sre-autocomplete
         sre-typescript
+        sre-helm
         sre-js))
 
 (dolist (file sre-pkg-full)

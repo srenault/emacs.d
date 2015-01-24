@@ -1,8 +1,5 @@
 ;; sre-editing.el
 
-(require 'helm-config)
-(global-set-key (kbd "C-c c") 'helm-swoop)
-
 ;; Save & restore opened files
 (desktop-save-mode 1)
 
