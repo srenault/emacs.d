@@ -1,0 +1,57 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/sre/.emacs.d/" . "sre/")
+ ("/home/sre/sites/cheminot.io/app/cheminot/app/" . "controllers/")
+ ("/home/sre/sites/cheminot.io/app/cheminot/" . "app/")
+ ("/home/sre/sites/cheminot.io/app/" . "cheminot/")
+ ("/home/sre/sites/cheminot.io/" . "app/")
+ ("/home/sre/sites/" . "cheminot.io/")
+ ("/home/sre/" . "sites/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/sre/sites/cheminot.io/"
+ "/home/sre/"
+ "/home/sre/.emacs.d/sre/"
+ "/home/sre/.emacs.d/"
+ "/home/sre/sites/cheminot.io/app/cheminot/app/controllers/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "run.sh"
+ "sre-extension.el"
+ "init.el"
+ "Api.scala"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/sre/sites/cheminot.io/app/cheminot/app/controllers/" (21242 37200 459918 645000) "Api.scala" "../" "./" "Application.scala" "Common.scala")
+
+ ("/home/sre/" (21428 30619 847517 216000) "tmp/" ".ssh/" "torrent/" ".sbt/" ".ivy2/" "sites/" "tools/" ".bash_history" ".oh-my-zsh/" ".bash_profile" ".zshrc" ".bash_logout" ".zcompdump-sd-43878-4.3.17" ".zsh_history" ".smex-items" ".config/" "public/" "../" ".emacs.d/" ".bashrc" "./" ".npm/" ".profile" ".zsh-update")
+
+ ("/home/sre/sites/cheminot.io/" (21223 26310 197279 810000) "data/" "web/" "run.sh" "log/" "../" "app/" "./" "error_pages/" "mobile/")
+
+ ("/home/sre/.emacs.d/sre/" (21428 30618 91512 541000) "sre-terminal.el" "sre-cra.el" "sre-project.el" "sre-fuzzy.el" "sre-golden.el" "sre-markdown.el" "sre-theme.el" "sre-ensime.el" "sre-whitespace.el" "sre-editing.el" "sre-slime.el" "sre-linum.el" "sre-scala.el" "sre-tree.el" "../" "sre-extension.el" "sre-haskell.el" "./" "sre-typescript.el" "sre-js.el" "sre-ido.el" "sre-defuns.el" "sre-dired.el" "sre-ack.el")
+
+ ("/home/sre/.emacs.d/" (21428 30618 587514 92000) "site-lisp/" ".git/" ".mc-lists.el" "elpa/" "utils/" "ido.last" "init.el" "../" "recentf" "./" ".gitignore" "sre/" "auto-save-list/")
+
+ ("/home/sre/sites/cheminot.io/app/current/.git/" (21222 59455 203960 578000) "refs/" "info/" "ORIG_HEAD" "index" "config" "branches/" "description" "logs/" "HEAD" "../" "packed-refs" "./" "objects/" "hooks/" "FETCH_HEAD")
+
+ ("/home/sre/.emacs.d/elpa/" (21184 13632 539399 347000) "archives/" "mic-paren-20120716.1647/" "mic-paren-readme.txt" "color-theme-20080305.34/" "haskell-mode-20131222.350/" "scala-mode2-20131115.2347/" "ido-vertical-mode-20131209.938/" "color-theme-solarized-20130307.1350/" "../" "smex-20131210.700/" "ido-ubiquitous-20131009.1047/" "ido-vertical-mode-readme.txt" "haskell-mode-readme.txt" "color-theme-readme.txt" "ido-ubiquitous-readme.txt" "./" "smex-readme.txt")
+
+ ("/home/sre/sites/cheminot.io/app/" (21193 38009 756755 393000) "current/" "../" "./" "cheminot/")
+
+ ("/home/sre/sites/cheminot.io/app/cheminot/" (21215 1290 790152 109000) "data/" "target/" ".git/" "README" "project/" "conf/" "logs/" "public/" "../" "test/" "app/" "./" ".gitignore" "buildDB")
+
+ ("/home/sre/sites/cheminot.io/app/cheminot/app/" (21215 1185 318058 334000) "tools/" "views/" "assets/" "tasks/" "Main.scala" "../" "Global.scala" "controllers/" "./" "models/")
+
+ ("/home/sre/sites/" (21179 28206 790041 548000) "cheminot.io/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
