@@ -16,11 +16,11 @@
 (setq ido-use-virtual-buffers t)
 
 ;; Make sure ido is really everywhere
-(require 'ido-ubiquitous)
+(package-require 'ido-ubiquitous)
 (ido-ubiquitous-mode)
 
 ;; Use smex to provide ido-like interface for M-x
-(require 'smex)
+(package-require 'smex)
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
@@ -28,7 +28,7 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; Vertical ido
-(require 'ido-vertical-mode)
+(package-require 'ido-vertical-mode)
 (ido-vertical-mode)
 
 (provide 'sre-ido)

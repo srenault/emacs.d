@@ -66,11 +66,9 @@
         sre-markdown
         sre-haskell
         sre-terminal
-        sre-cra
         sre-hack
         sre-theme
         sre-autocomplete
-        sre-typescript
         sre-helm
         sre-js))
 

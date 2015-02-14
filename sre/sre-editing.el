@@ -43,11 +43,12 @@
 (setq sentence-end-double-space nil)
 
 ;; Enforce proper whitespace
+(setq mode-require-final-newline nil)
 (package-require 'ethan-wspace)
 (global-ethan-wspace-mode 1)
 
 ;; Brace
-(require 'mic-paren)
+(package-require 'mic-paren)
 (paren-activate)
 (show-paren-mode 1)
 
@@ -77,7 +78,7 @@
 (global-set-key (kbd "C-M-'") 'mc/mark-more-like-this-extended)
 (global-set-key (kbd "C-*") 'mc/mark-all-like-this-dwim)
 
-(require 'ace-jump-mode)
+(package-require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 (defun iwb ()
@@ -87,10 +88,9 @@
   (indent-region (point-min) (point-max) nil)
   (untabify (point-min) (point-max)))
 
-(require 'golden-ratio)
+(package-require 'golden-ratio)
 (golden-ratio-mode 1)
 
-(add-to-list 'load-path "~/site-lisp/helm-swoop")
-(require 'helm-swoop)
+(package-require 'helm-swoop)
 
 (provide 'sre-editing)

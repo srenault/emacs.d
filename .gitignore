@@ -13,3 +13,5 @@ tutorial/English.tut
 var/pcache/ucs-utils
 .helm-backup
 .emacs.desktop.lock
+ido.last
+smex-items
