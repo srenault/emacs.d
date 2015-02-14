@@ -15,3 +15,5 @@ var/pcache/ucs-utils
 .emacs.desktop.lock
 ido.last
 smex-items
+var
+recentf
