@@ -18,3 +18,4 @@ smex-items
 var
 recentf
 eshell
+.mc-lists.el
