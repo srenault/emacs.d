@@ -76,6 +76,6 @@
         sre-ido
         sre-helm))
 
-(dolist (file sre-pkg-server)
+(dolist (file sre-pkg-desktop)
   (require file))
 (put 'narrow-to-region 'disabled nil)
