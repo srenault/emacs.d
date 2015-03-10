@@ -14,9 +14,9 @@
 (global-set-key (kbd "C-c f") 'projectile-find-file)
 
 ;; Backup
-(package-require 'helm-backup)
-(add-hook 'after-save-hook 'helm-backup-versioning)
-(global-set-key (kbd "C-c b") 'helm-backup)
-(setq helm-backup-path "~/.emacs.d/.helm-backup")
+;; (package-require 'helm-backup)
+;; (add-hook 'after-save-hook 'helm-backup-versioning)
+;; (global-set-key (kbd "C-c b") 'helm-backup)
+;; (setq helm-backup-path "~/.emacs.d/.helm-backup")
 
 (provide 'sre-helm)

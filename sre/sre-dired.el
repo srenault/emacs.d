@@ -3,7 +3,7 @@
 ;; Auto refresh buffers
 (global-auto-revert-mode 1)
 
-(require 'dired+)
+(package-require 'dired+)
 
 (setq frame-title-format
       (list (format "%s %%S: %%j " (system-name))

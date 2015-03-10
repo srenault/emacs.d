@@ -15,6 +15,8 @@
 ;; )
 ;; (add-hook 'after-init-hook 'zenburn-init)
 
+
+(package-require 'darkburn-theme)
 (load-theme 'darkburn t)
 
 (provide 'sre-theme)
