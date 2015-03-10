@@ -8,6 +8,14 @@
 ;; Enable { cut, copy, paste, Undo }
 (cua-mode 1)
 
+(setq mac-option-modifier nil
+      mac-command-modifier 'meta
+      x-select-enable-clipboard t)
+
+;; Display line number
+(linum-mode 1)
+(global-linum-mode 1)
+
 ;; Stop creating backup~ files
 (setq make-backup-files nil)
 ;; Stop creating #autosave# files
@@ -44,6 +52,19 @@
 
 ;; Enforce proper whitespace
 (package-require 'ethan-wspace)
+(setq whitespace-style (quote (spaces tabs newline space-mark tab-mark newline-mark)))
+
+(setq whitespace-display-mappings
+ '((space-mark 32 [183] [95]) ; normal space
+   (space-mark 160 [164] [95])
+   (space-mark 2208 [2212] [95])
+   (space-mark 2336 [2340] [95])
+   (space-mark 3616 [3620] [95])
+   (space-mark 3872 [3876] [95])
+   (newline-mark 10 [9166 10]) ; newline
+   (tab-mark 9 [9655 9] [92 9])))
+
+(setq mode-require-final-newline nil)
 (global-ethan-wspace-mode 1)
 
 ;; Brace
@@ -61,13 +82,6 @@
 
 (custom-set-variables
   '(ac-etags-requires 1))
-
-(eval-after-load "etags"
-  '(progn
-      (ac-etags-setup)))
-
-;;(ac-set-trigger-key "TAB")
-
 (add-hook 'scala-mode-hook 'ac-etags-ac-setup)
 
 ;; Multiple cursors!
@@ -77,6 +91,7 @@
 (global-set-key (kbd "C-M-'") 'mc/mark-more-like-this-extended)
 (global-set-key (kbd "C-*") 'mc/mark-all-like-this-dwim)
 
+(package-require 'ace-jump-mode)
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 

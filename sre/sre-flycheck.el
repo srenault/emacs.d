@@ -1,4 +1,5 @@
 (package-require 'flycheck)
+
 (add-hook 'find-file-hook
           (lambda ()
             (when (not (equal 'emacs-lisp-mode major-mode))
