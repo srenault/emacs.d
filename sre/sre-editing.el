@@ -1,8 +1,5 @@
 ;; sre-editing.el
 
-;; Save & restore opened files
-(desktop-save-mode 1)
-
 (setq x-select-enable-clipboard t)
 
 ;; Enable { cut, copy, paste, Undo }
