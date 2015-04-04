@@ -57,6 +57,7 @@
         sre-desktop
         sre-extension
         sre-dired
+        sre-git
         sre-terminal
         sre-theme
         sre-org
@@ -64,8 +65,9 @@
         sre-autocomplete
         sre-markdown
         sre-helm
-        sre-haskell
         sre-scala
+        sre-php
+        sre-haskell
         sre-js))
 
 (setq sre-pkg-server
@@ -73,6 +75,7 @@
         sre-editing
         sre-extension
         sre-dired
+        sre-git
         sre-ido
         sre-helm))
 
