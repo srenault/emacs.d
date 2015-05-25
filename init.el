@@ -68,6 +68,7 @@
         sre-scala
         sre-php
         sre-haskell
+        sre-mail
         sre-js))
 
 (setq sre-pkg-server

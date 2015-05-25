@@ -33,6 +33,8 @@
 (set-default 'indent-tabs-mode nil)
 (define-key global-map (kbd "RET") 'newline-and-indent)
 (setq-default tab-width 4)
+(setq-default c-basic-offset 4)
+(setq-default sgml-basic-offset 2)
 ;; Javascript
 (setq-default js2-basic-offset 2)
 ;; JSON
@@ -46,7 +48,7 @@
 (setq c-default-style "java")
 (setq-default c-basic-offset 2)
 (setq sentence-end-double-space nil)
-
+(setq-default css-indent-offset 4)
 ;; Enforce proper whitespace
 (setq mode-require-final-newline nil)
 (package-require 'ethan-wspace)
@@ -100,8 +102,8 @@
   (indent-region (point-min) (point-max) nil)
   (untabify (point-min) (point-max)))
 
-(package-require 'golden-ratio)
-(golden-ratio-mode 1)
+;(package-require 'golden-ratio)
+;(golden-ratio-mode 1)
 
 (package-require 'helm-swoop)
 
