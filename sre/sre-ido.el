@@ -30,5 +30,6 @@
 ;; Vertical ido
 (package-require 'ido-vertical-mode)
 (ido-vertical-mode)
+(setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)
 
 (provide 'sre-ido)
