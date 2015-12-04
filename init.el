@@ -50,6 +50,7 @@
 
 ;; Push some bin to PATH
 ;(push "/Users/litig/bin/" exec-path)
+(push "/usr/local/bin/" exec-path)
 
 (setq sre-pkg-desktop
       '(sre-defuns
@@ -59,16 +60,16 @@
         sre-dired
         sre-git
         sre-terminal
-        sre-theme
-        sre-org
+;;        sre-theme
+;;        sre-org
         sre-ido
-        sre-autocomplete
-        sre-markdown
+;;        sre-autocomplete
+;;        sre-markdown
         sre-helm
         sre-scala
         sre-php
-        sre-haskell
-        sre-mail
+;;        sre-haskell
+;;        sre-mail
         sre-js))
 
 (setq sre-pkg-server

@@ -85,6 +85,7 @@
 (add-hook 'scala-mode-hook 'ac-etags-ac-setup)
 
 ;; Multiple cursors!
+(package-require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
