@@ -3,7 +3,8 @@
 (package-require 'helm)
 
 (require 'helm-config)
-(global-set-key (kbd "C-c c") 'helm-swoop)
+
+;(global-set-key (kbd "C-c c") 'helm-swoop)
 
 (global-set-key (kbd "<print>") 'helm-mini)
 

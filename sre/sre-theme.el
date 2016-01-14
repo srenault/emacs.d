@@ -4,7 +4,7 @@
 ;(add-to-list 'custom-theme-load-path "~/.emacs.d/site-lisp/themes/")
 ;(require 'base16-solarized-theme)
 
-;(require 'color-theme)
+(require 'color-theme)
 ;(color-theme-initialize)
 
 ;(require 'color-theme-solarized)
