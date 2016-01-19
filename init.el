@@ -10,6 +10,8 @@
                     (propertized-buffer-identification "%12f")
                     (propertized-buffer-identification "%12b")))
 
+(setq backup-directory-alist `(("." . "~/.saves")))
+
 ;; Disable tools bar
 (dolist (mode '(tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
