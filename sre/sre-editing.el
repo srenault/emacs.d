@@ -73,7 +73,7 @@
 (show-paren-mode 1)
 
 ;;CTAGS
-(setq path-to-ctags "/opt/local/bin/ctags")
+(package-require 'ac-etags)
 (defun create-tags (dir-name)
   "Create tags file."
   (interactive "DDirectory: ")

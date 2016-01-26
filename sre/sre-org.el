@@ -13,7 +13,7 @@
 (setq org-directory "~/data/Dropbox/Home/org-mode")
 (setq org-default-notes-file "~/data/Dropbox/Home/org-mode/notes.org")
 
-(define-key global-map [(control meta ?r)] 'remember)
+(define-key global-map [(control meta ?r)] 'org-capture)
 
 (setq org-agenda-custom-commands
       '(("P" "prismic.io"
@@ -31,9 +31,13 @@
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/data/Dropbox/Home/org-mode/sre.org" "Tasks")
          "* TODO %?\n  %i\n  %a")
-        ("m" "Movie" entry (file+headline "~/data/Dropbox/Home/org-mode/movie.org" "Movies")
+        ("r" "Read it later" entry (file+headline "~/data/Dropbox/Home/org-mode/sre.org" "Read it later")
+         "* TODO %?\n  %i\n  %a")
+        ("v" "View it later" entry (file+headline "~/data/Dropbox/Home/org-mode/sre.org" "View it later")
+         "* TODO %?\n  %i\n  %a")
+        ("n" "Notes" entry (file+headline "~/data/Dropbox/Home/org-mode/notes.org" "Notes")
          "* TODO %?\n  %i\n  %a")))
 
-(setq org-refile-targets '((org-agenda-files :level . 2)))
+(setq org-refile-targets '((org-agenda-files :level . 1)))
 
 (provide 'sre-org)

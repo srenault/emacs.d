@@ -68,6 +68,9 @@
         sre-scala
         sre-php
         sre-js
+        sre-mail
+        sre-css
+        sre-markdown
         sre-theme))
 
 (setq sre-pkg-server
@@ -92,7 +95,7 @@
    ["#3F3F3F" "#CC9393" "#7F9F7F" "#F0DFAF" "#8CD0D3" "#DC8CC3" "#93E0E3" "#DCDCCC"])
  '(custom-safe-themes
    (quote
-    ("ce557950466bf42096853c6dac6875b9ae9c782b8665f62478980cc5e3b6028d" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
+    ("71ecffba18621354a1be303687f33b84788e13f40141580fa81e7840752d31bf" "ce557950466bf42096853c6dac6875b9ae9c782b8665f62478980cc5e3b6028d" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
  '(fci-rule-color "#383838")
  '(nrepl-message-colors
    (quote

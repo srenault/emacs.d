@@ -1,4 +1,5 @@
 (add-to-list 'load-path  "~/.emacs.d/site-lisp/mu/mu4e")
+(add-to-list 'load-path  "~/Dropbox/Home/mu4e")
 
 (require 'mu4e)
 (require 'mu4e-contrib)
@@ -8,7 +9,7 @@
 ;; Maildir setup
 (setq
  mu4e-mu-binary "/usr/local/bin/mu"
- mu4e-maildir "~/data/Dropbox/Mail"
+ mu4e-maildir "~/Dropbox/Home/Mail"
  mu4e-sent-folder "/Sent"
  mu4e-drafts-folder "/Drafts"
  mu4e-trash-folder "/Trash"
@@ -24,24 +25,20 @@
 
 ;; User info
 (setq
- user-mail-address "srenault@openmailbox.org"
+ user-mail-address "srenault.contact@gmail.com"
  user-full-name "Sebastien Renault"
- mu4e-compose-signature "Sebastien Renault <srenault@openmailbox.org>\n"
- mu4e-user-mail-address-list '("srenault@openmailbox.org.org")
+ mu4e-compose-signature "Sebastien Renault <srenault.contact@gmail.com>\n"
+ mu4e-user-mail-address-list '("srenault.contact@gmail.com")
  mu4e-attachment-dir "~/Downloads/Mail")
 
 ;; SMTP
 (package-require 'async)
 (require 'smtpmail-async)
-(setq
- send-mail-function 'async-smtpmail-send-it
- message-send-mail-function 'async-smtpmail-send-it
- smtpmail-stream-type 'starttls
- smtpmail-default-smtp-server "imap.openmailbox.org"
- smtpmail-smtp-user "srenault@openmailbox.org"
- smtpmail-smtp-server "imap.openmailbox.org"
- smtpmail-smtp-service 143
- smtpmail-queue-mail nil
- smtpmail-queue-dir "~/data/Dropbox/Mail/Queue/cur")
+
+(setq message-send-mail-function 'async-smtpmail-send-it
+      send-mail-function 'async-smtpmail-send-it
+      starttls-use-gnutls t
+      smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil)))
+(require 'sre-mu4e)
 
 (provide 'sre-mail)

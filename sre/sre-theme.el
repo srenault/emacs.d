@@ -17,6 +17,7 @@
 
 
 (package-require 'darkburn-theme)
-(load-theme 'darkburn t)
-
+(package-require 'cyberpunk-theme)
+;(load-theme 'darkburn t)
+(load-theme 'cyberpunk t)
 (provide 'sre-theme)
