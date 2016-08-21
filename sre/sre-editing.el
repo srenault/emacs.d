@@ -50,8 +50,7 @@
 (setq sentence-end-double-space nil)
 (setq-default css-indent-offset 4)
 ;; Enforce proper whitespace
-(setq mode-require-final-newline nil)
-(package-require 'ethan-wspace)
+;;(package-require 'ethan-wspace)
 (setq whitespace-style (quote (spaces tabs newline space-mark tab-mark newline-mark)))
 
 (setq whitespace-display-mappings
@@ -64,8 +63,7 @@
    (newline-mark 10 [9166 10]) ; newline
    (tab-mark 9 [9655 9] [92 9])))
 
-(setq mode-require-final-newline nil)
-(global-ethan-wspace-mode 1)
+;(global-ethan-wspace-mode 1)
 
 ;; Brace
 (package-require 'mic-paren)
@@ -90,7 +88,10 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-M-'") 'mc/mark-more-like-this-extended)
-(global-set-key (kbd "C-*") 'mc/mark-all-like-this-dwim)
+(global-set-key (kbd "C-M-=") 'mc/mark-next-like-this-word)
+(global-set-key (kbd "C-M-:") 'mc/mark-all-like-this-dwim)
+(global-unset-key (kbd "M-<down-mouse-1>"))
+(global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
 
 ;(package-require 'ace-jump-mode)
 (require 'ace-jump-mode)

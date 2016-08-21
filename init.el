@@ -51,8 +51,7 @@
  (package-initialize)
 
 ;; Push some bin to PATH
-;(push "/Users/litig/bin/" exec-path)
-(push "/usr/local/bin/" exec-path)
+(setq exec-path (append exec-path '("/usr/local/bin/")))
 
 (setq sre-pkg-desktop
       '(sre-defuns
@@ -67,11 +66,11 @@
         sre-helm
         sre-scala
         sre-php
+        sre-theme
         sre-js
         sre-mail
-        sre-css
-        sre-markdown
-        sre-theme))
+        sre-multimodes
+        sre-markdown))
 
 (setq sre-pkg-server
       '(sre-defuns
@@ -95,7 +94,7 @@
    ["#3F3F3F" "#CC9393" "#7F9F7F" "#F0DFAF" "#8CD0D3" "#DC8CC3" "#93E0E3" "#DCDCCC"])
  '(custom-safe-themes
    (quote
-    ("71ecffba18621354a1be303687f33b84788e13f40141580fa81e7840752d31bf" "ce557950466bf42096853c6dac6875b9ae9c782b8665f62478980cc5e3b6028d" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
+    ("a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "e24679edfdea016519c0e2d4a5e57157a11f928b7ef4361d00c23a7fe54b8e01" "3fb38c0c32f0b8ea93170be4d33631c607c60c709a546cb6199659e6308aedf7" "f21caace402180ab3dc5157d2bb843c4daafbe64aadc362c9f4558ac17ce43a2" "76bd62f6ce376bf0597fab7f478eaa98cd94a7b41f0ae46de63a958fbe99c1d9" "f2503f0a035c2122984e90eb184185769ee665de5864edc19b339856942d2d2d" "e8e744a1b0726814ac3ab86ad5ccdf658b9ff1c5a63c4dc23841007874044d4a" "f245c9f24b609b00441a6a336bcc556fe38a6b24bfc0ca4aedd4fe23d858ba31" "1462969067f2ff901993b313085d47e16badeec58b63b9ed67fa660cebaaddae" "cdfb22711f64d0e665f40b2607879fcf2607764b2b70d672ddaa26d2da13049f" "71ecffba18621354a1be303687f33b84788e13f40141580fa81e7840752d31bf" "ce557950466bf42096853c6dac6875b9ae9c782b8665f62478980cc5e3b6028d" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
  '(fci-rule-color "#383838")
  '(nrepl-message-colors
    (quote

@@ -33,4 +33,9 @@
                 (while (< (point) end)
                   (join-line 1)))))
 
+(defun revert-buffer-no-confirm ()
+    "Revert buffer without confirmation."
+    (interactive)
+    (revert-buffer t t))
+
 (provide 'sre-defuns)

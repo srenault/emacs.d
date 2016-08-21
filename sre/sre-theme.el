@@ -16,8 +16,13 @@
 ;; (add-hook 'after-init-hook 'zenburn-init)
 
 
-(package-require 'darkburn-theme)
-(package-require 'cyberpunk-theme)
+(sml/setup)
+(setq sml/theme 'dark)
+
+(package-require 'base16-theme)
+;(package-require 'darkburn-theme)
+;(package-require 'cyberpunk-theme)
 ;(load-theme 'darkburn t)
-(load-theme 'cyberpunk t)
+
+(load-theme 'base16-ashes-dark t)
 (provide 'sre-theme)

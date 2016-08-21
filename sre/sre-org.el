@@ -7,9 +7,6 @@
 (setq org-agenda-files (list "~/data/Dropbox/Home/org-mode/birthdate.org"
                              "~/data/Dropbox/Home/org-mode/sre.org"))
 
-(require 'remember)
-(require 'org-remember)
-
 (setq org-directory "~/data/Dropbox/Home/org-mode")
 (setq org-default-notes-file "~/data/Dropbox/Home/org-mode/notes.org")
 
