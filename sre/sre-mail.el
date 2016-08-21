@@ -36,6 +36,12 @@
 (package-require 'async)
 (require 'smtpmail-async)
 
+(setq message-send-mail-function 'smtpmail-send-it)
+(setq smtpmail-smtp-service 587)
+(setq smtpmail-smtp-user "srenault@openmailbox.org")
+(setq smtpmail-smtp-server "smtp.openmailbox.org")
+(setq smtpmail-stream-type 'starttls)
+
 (require 'sre-mu4e)
 
 (provide 'sre-mail)
