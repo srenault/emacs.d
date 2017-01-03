@@ -24,5 +24,5 @@
 ;(package-require 'cyberpunk-theme)
 ;(load-theme 'darkburn t)
 
-(load-theme 'base16-ashes-dark t)
+(load-theme 'base16-ashes t)
 (provide 'sre-theme)

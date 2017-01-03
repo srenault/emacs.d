@@ -48,13 +48,14 @@
 (add-to-list 'package-archives
             '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
- (package-initialize)
+(package-initialize)
 
 ;; Push some bin to PATH
-(setq exec-path (append exec-path '("/usr/local/bin/")))
+;;(setq exec-path (append exec-path '("/usr/local/bin/")))
 
 (setq sre-pkg-desktop
       '(sre-defuns
+        sre-path
         sre-editing
         sre-desktop
         sre-extension
@@ -74,6 +75,7 @@
 
 (setq sre-pkg-server
       '(sre-defuns
+        sre-path
         sre-editing
         sre-extension
         sre-dired
@@ -99,6 +101,9 @@
  '(nrepl-message-colors
    (quote
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
+ '(package-selected-packages
+   (quote
+    (use-package yasnippet yaml-mode web-mode stylus-mode smex smart-mode-line-powerline-theme scala-mode2 scala-mode sbt-mode rainbow-mode php-mode offlineimap nginx-mode multiple-cursors multi-term mmm-mode mic-paren markdown-mode magit lua-mode jsx-mode json-mode js3-mode js2-mode jade-mode ido-vertical-mode ido-ubiquitous helm-swoop helm-projectile helm-git-grep gradle-mode flycheck exec-path-from-shell ethan-wspace etags-table etags-select editorconfig-core editorconfig dockerfile-mode dired+ darkburn-theme cypher-mode cyberpunk-theme ctags-update ctags company color-theme-solarized base16-theme autopair applescript-mode ag ace-jump-mode ac-etags)))
  '(send-mail-function (quote mailclient-send-it))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
