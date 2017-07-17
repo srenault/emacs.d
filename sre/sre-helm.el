@@ -4,12 +4,12 @@
 
 (package-require 'helm-git-grep)
 
-(global-set-key (kbd "C-c g") 'helm-git-grep)
-
-(define-key isearch-mode-map (kbd "C-c g") 'helm-git-grep-from-isearch)
+(global-set-key (kbd "C-c g") 'helm-projectile-grep)
 
 (eval-after-load 'helm
-  '(define-key helm-map (kbd "C-c g") 'helm-git-grep-from-helm))
+  '(define-key helm-map (kbd "C-c g") 'helm-projectile-grep))
+
+(setq projectile-use-git-grep 1)
 
 (require 'helm-config)
 
