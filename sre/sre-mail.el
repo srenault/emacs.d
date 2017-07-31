@@ -1,3 +1,9 @@
+;; brew install automake
+;; brew install libtool
+;; brew install autoconf-archive
+;; brew install glib
+;; brew install gmime
+
 (add-to-list 'load-path  "~/.emacs.d/site-lisp/mu/mu4e")
 (add-to-list 'load-path  "~/Dropbox/Home/mu4e")
 

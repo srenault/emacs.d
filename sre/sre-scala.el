@@ -1,6 +1,6 @@
 ;; sre-scala
 
-(package-require 'scala-mode2)
+(package-require 'scala-mode)
 
 (package-require 'sbt-mode)
 

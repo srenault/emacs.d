@@ -4,7 +4,7 @@
 ;(add-to-list 'custom-theme-load-path "~/.emacs.d/site-lisp/themes/")
 ;(require 'base16-solarized-theme)
 
-(require 'color-theme)
+;(package-require 'color-theme)
 ;(color-theme-initialize)
 
 ;(require 'color-theme-solarized)
@@ -16,8 +16,8 @@
 ;; (add-hook 'after-init-hook 'zenburn-init)
 
 
-(sml/setup)
-(setq sml/theme 'dark)
+;(sml/setup)
+;(setq sml/theme 'dark)
 
 (package-require 'base16-theme)
 ;(package-require 'darkburn-theme)

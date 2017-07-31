@@ -23,7 +23,7 @@
         "JSON" "$" "_"))
 (setq js2-strict-missing-semi-warning nil)
 
-(require 'flycheck)
+(package-require 'flycheck)
 
 (use-package flycheck
   :ensure t

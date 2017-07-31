@@ -1,9 +1,6 @@
 ;; sre-defuns.el
 
-(defun package-require (pkg)
-  "Install a package only if it's not already installed."
-  (when (not (package-installed-p pkg))
-    (package-install pkg)))
+(package-require 'use-package)
 
 (defun kill-other-buffers ()
       "Kill all other buffers."

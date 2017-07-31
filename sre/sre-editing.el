@@ -49,8 +49,6 @@
 (setq-default c-basic-offset 2)
 (setq sentence-end-double-space nil)
 (setq-default css-indent-offset 4)
-;; Enforce proper whitespace
-;;(package-require 'ethan-wspace)
 (setq whitespace-style (quote (spaces tabs newline space-mark tab-mark newline-mark)))
 
 (setq whitespace-display-mappings
@@ -63,24 +61,10 @@
    (newline-mark 10 [9166 10]) ; newline
    (tab-mark 9 [9655 9] [92 9])))
 
-;(global-ethan-wspace-mode 1)
-
-;; Brace
+;; Parens
 (package-require 'mic-paren)
 (paren-activate)
 (show-paren-mode 1)
-
-;;CTAGS
-(package-require 'ac-etags)
-(defun create-tags (dir-name)
-  "Create tags file."
-  (interactive "DDirectory: ")
-  (shell-command
-   (format "ctags -f %s -e -R %s" path-to-ctags (directory-file-name dir-name))))
-
-(custom-set-variables
-  '(ac-etags-requires 1))
-(add-hook 'scala-mode-hook 'ac-etags-ac-setup)
 
 ;; Multiple cursors!
 (package-require 'multiple-cursors)
@@ -93,19 +77,12 @@
 (global-unset-key (kbd "M-<down-mouse-1>"))
 (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
 
-;(package-require 'ace-jump-mode)
-(require 'ace-jump-mode)
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
-
 (defun iwb ()
   "indent whole buffer"
   (interactive)
   (delete-trailing-whitespace)
   (indent-region (point-min) (point-max) nil)
   (untabify (point-min) (point-max)))
-
-;(package-require 'golden-ratio)
-;(golden-ratio-mode 1)
 
 (package-require 'helm-swoop)
 
