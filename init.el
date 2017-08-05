@@ -21,6 +21,9 @@
 ;; Add .emacs.d to load-path
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
+
+(setq exec-path (append exec-path '("/usr/local/bin/")))
+
 ;; Package
 (defun package-require (pkg)
   "Install a package only if it's not already installed."
@@ -52,7 +55,7 @@
         sre-php
         sre-theme
         sre-js
-        sre-mail
+        ;sre-mail
         sre-multimodes
         sre-markdown))
 

@@ -84,6 +84,8 @@
   (indent-region (point-min) (point-max) nil)
   (untabify (point-min) (point-max)))
 
+(package-require 'editorconfig)
+
 (package-require 'helm-swoop)
 
 (provide 'sre-editing)
