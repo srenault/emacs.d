@@ -24,6 +24,7 @@
       '("module" "require" "__dirname" "process" "console" "define"
         "JSON" "$" "_"))
 (setq js2-strict-missing-semi-warning nil)
+(setq js-switch-indent-offset 2)
 
 (package-require 'flycheck)
 
