@@ -22,8 +22,6 @@
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
 
-(setq exec-path (append exec-path '("/usr/local/bin/")))
-
 ;; Package
 (defun package-require (pkg)
   "Install a package only if it's not already installed."
@@ -37,6 +35,9 @@
                   ("elpa" . "http://tromey.com/elpa/")))
   (add-to-list 'package-archives source t))
 (package-initialize)
+
+(require 'exec-path-from-shell)
+(exec-path-from-shell-initialize)
 
 ;; Load modules
 (add-to-list 'load-path (concat dotfiles-dir "sre"))
@@ -56,7 +57,6 @@
         sre-theme
         sre-js
         ;sre-mail
-        sre-multimodes
         sre-markdown))
 
 (setq sre-pkg-server
@@ -89,7 +89,7 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (typescript-mode elscreen use-package yasnippet yaml-mode web-mode stylus-mode smex smart-mode-line-powerline-theme scala-mode2 scala-mode sbt-mode rainbow-mode php-mode offlineimap nginx-mode multiple-cursors multi-term mmm-mode mic-paren markdown-mode magit lua-mode jsx-mode json-mode js3-mode js2-mode jade-mode ido-vertical-mode ido-ubiquitous helm-swoop helm-projectile helm-git-grep gradle-mode flycheck exec-path-from-shell ethan-wspace etags-table etags-select editorconfig-core editorconfig dockerfile-mode dired+ darkburn-theme cypher-mode cyberpunk-theme ctags-update ctags company color-theme-solarized base16-theme autopair applescript-mode ag ace-jump-mode ac-etags)))
+    (add-node-modules-path typescript-mode elscreen use-package yasnippet yaml-mode web-mode stylus-mode smex smart-mode-line-powerline-theme scala-mode2 scala-mode sbt-mode rainbow-mode php-mode offlineimap nginx-mode multiple-cursors multi-term mmm-mode mic-paren markdown-mode magit lua-mode jsx-mode json-mode js3-mode js2-mode jade-mode ido-vertical-mode ido-ubiquitous helm-swoop helm-projectile helm-git-grep gradle-mode flycheck exec-path-from-shell ethan-wspace etags-table etags-select editorconfig-core editorconfig dockerfile-mode dired+ darkburn-theme cypher-mode cyberpunk-theme ctags-update ctags company color-theme-solarized base16-theme autopair applescript-mode ag ace-jump-mode ac-etags)))
  '(send-mail-function (quote mailclient-send-it))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
