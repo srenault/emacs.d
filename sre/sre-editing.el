@@ -46,7 +46,6 @@
 (setq-default nxml-child-indent 2)
 ;; Default formatting style for C based modes
 (setq c-default-style "java")
-(setq-default c-basic-offset 2)
 (setq sentence-end-double-space nil)
 (setq-default css-indent-offset 4)
 (setq whitespace-style (quote (spaces tabs newline space-mark tab-mark newline-mark)))
@@ -85,6 +84,9 @@
   (untabify (point-min) (point-max)))
 
 (package-require 'editorconfig)
+(editorconfig-mode 1)
+
+(package-require 'blank-mode)
 
 (package-require 'helm-swoop)
 
