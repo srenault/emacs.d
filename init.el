@@ -35,7 +35,7 @@
   (add-to-list 'package-archives source t))
 (package-initialize)
 
-(require 'exec-path-from-shell)
+(package-require 'exec-path-from-shell)
 (exec-path-from-shell-initialize)
 
 ;; Load modules
@@ -61,7 +61,6 @@
 
 (setq sre-pkg-server
       '(sre-defuns
-
         sre-editing
         sre-extension
         sre-dired
