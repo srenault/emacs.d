@@ -38,6 +38,8 @@
 (package-require 'exec-path-from-shell)
 (exec-path-from-shell-initialize)
 
+(add-to-list 'load-path "/usr/local/bin") (add-to-list 'exec-path "/usr/local/bin")
+
 ;; Load modules
 (add-to-list 'load-path (concat dotfiles-dir "sre"))
 (setq sre-pkg-desktop
@@ -56,7 +58,9 @@
         sre-theme
         sre-js
         sre-csharp
-        ;sre-mail
+        sre-yaml
+        sre-mail
+        sre-gpg
         sre-markdown))
 
 (setq sre-pkg-server
@@ -70,3 +74,17 @@
 
 (dolist (file sre-pkg-desktop)
   (require file))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (epa-file shell-here password-store yaml-mode web-mode use-package typescript-mode smex scala-mode sbt-mode php-mode multiple-cursors mic-paren markdown-mode magit json-mode js2-mode ido-vertical-mode ido-ubiquitous helm-swoop helm-projectile helm-git-grep flycheck exec-path-from-shell editorconfig dired+ csharp-mode blank-mode base16-theme add-node-modules-path))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

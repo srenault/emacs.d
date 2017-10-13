@@ -60,6 +60,17 @@
    (newline-mark 10 [9166 10]) ; newline
    (tab-mark 9 [9655 9] [92 9])))
 
+(setq hscroll-margin 1
+      hscroll-step 1
+      scroll-conservatively 1001
+      scroll-margin 0
+      scroll-preserve-screen-position t
+      mac-redisplay-dont-reset-vscroll t
+      mac-mouse-wheel-smooth-scroll nil
+      mouse-wheel-scroll-amount '(2)
+      mouse-wheel-progressive-speed nil ; don't accelerate scrolling
+      )
+
 ;; Parens
 (package-require 'mic-paren)
 (paren-activate)

@@ -9,9 +9,9 @@
 
 (define-key global-map "\C-ca" 'org-agenda)
 
-(setq org-agenda-files (list "/Users/sre/srebox/org-mode/sre.org"))
 
 (setq org-directory "/Users/sre/srebox/org-mode")
+(setq org-agenda-files (list "/Users/sre/srebox/org-mode/sre.org"))
 (setq org-default-notes-file "/Users/sre/srebox/org-mode/notes.org")
 
 (define-key global-map [(control meta ?r)] 'org-capture)
@@ -20,9 +20,6 @@
       '(("P" "prismic.io"
          ((agenda)
           (tags-todo "PRISMICIO")))
-        ("C" "cheminot.org"
-         ((agenda)
-          (tags-todo "CHEMINOT")))
         ("D" "Daily Action List"
          ((agenda "" ((org-agenda-ndays 1)
                       (org-agenda-sorting-strategy
@@ -31,13 +28,13 @@
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "/Users/sre/srebox/org-mode/sre.org" "Backlog")
-         "* TODO %?\n  %i\n  %a")
+         "* TODO %?\n  %i")
         ("r" "Read it later" entry (file+headline "/Users/sre/srebox/org-mode/sre.org" "Read it later")
-         "* TODO %?\n  %i\n  %a")
+         "* TODO %?\n  %i\n")
         ("v" "View it later" entry (file+headline "/Users/sre/srebox/org-mode/sre.org" "View it later")
-         "* TODO %?\n  %i\n  %a")
+         "* TODO %?\n  %i\n")
         ("n" "Notes" entry (file+headline "/Users/sre/srebox/org-mode/notes.org" "Notes")
-         "* TODO %?\n  %i\n  %a")))
+         "* TODO %?\n  %i\n")))
 
 
 (setq org-publish-project-alist
