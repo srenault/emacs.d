@@ -4,7 +4,7 @@
 ;; brew install glib
 ;; brew install gmime
 
-(add-to-list 'load-path  "/usr/local/Cellar/mu/0.9.18_1/share/emacs/site-lisp/mu/mu4e")
+(add-to-list 'load-path  "/usr/local/Cellar/mu/1.0/share/emacs/site-lisp/mu/mu4e")
 
 (require 'mu4e)
 (require 'mu4e-contrib)
@@ -53,5 +53,16 @@
  smtpmail-smtp-service 465
  smtpmail-queue-mail nil
  smtpmail-queue-dir "~/srebox/sre/mail/srenault@openmailbox.org/Queue/cur")
+
+(setq
+ ;; mu4e-html2text-command "w3m -dump -T text/html -cols 65536"
+ mu4e-html2text-command 'mu4e-shr2text
+ mu4e-view-prefer-html t
+ mu4e-view-show-images t)
+
+(when (fboundp 'imagemagick-register-types)
+  (imagemagick-register-types))
+
+(setq mu4e-view-prefer-html t)
 
 (provide 'sre-mail)

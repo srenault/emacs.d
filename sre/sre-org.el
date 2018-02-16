@@ -27,8 +27,12 @@
                       (org-deadline-warning-days 0)))))))
 
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "/Users/sre/srebox/org-mode/sre.org" "Backlog")
-         "* TODO %?\n  %i")
+      '(("b" "Backlog" entry (file+headline "/Users/sre/srebox/org-mode/sre.org" "Backlog")
+         "* TODO %?\n  %i\n")
+        ("p" "prismic.io" entry (file+headline "/Users/sre/srebox/org-mode/sre.org" "prismic.io")
+         "* TODO %? :PRISMIC:\n  %i\n")
+        ("m" "house" entry (file+headline "/Users/sre/srebox/org-mode/sre.org" "House")
+         "* TODO %? :HOUSE:\n  %i\n")
         ("r" "Read it later" entry (file+headline "/Users/sre/srebox/org-mode/sre.org" "Read it later")
          "* TODO %?\n  %i\n")
         ("v" "View it later" entry (file+headline "/Users/sre/srebox/org-mode/sre.org" "View it later")
@@ -36,6 +40,8 @@
         ("n" "Notes" entry (file+headline "/Users/sre/srebox/org-mode/notes.org" "Notes")
          "* TODO %?\n  %i\n")))
 
+(setq org-todo-keywords
+      '((sequence "TODO" "QUEUED" "STAGE" "EXP")))
 
 (setq org-publish-project-alist
       '(

@@ -1,28 +1,17 @@
 ;; sre-theme.el
 
-;(add-to-list 'load-path "~/.emacs.d/site-lisp/base16-emacs")
-;(add-to-list 'custom-theme-load-path "~/.emacs.d/site-lisp/themes/")
-;(require 'base16-solarized-theme)
+;; No splash screen
+(setq inhibit-startup-message t)
 
-;(package-require 'color-theme)
-;(color-theme-initialize)
-
-;(require 'color-theme-solarized)
-;(color-theme-solarized-dark)
-
-;; (defun zenburn-init ()
-;;   (load-theme 'zenburn)
-;; )
-;; (add-hook 'after-init-hook 'zenburn-init)
-
-
-;(sml/setup)
-;(setq sml/theme 'dark)
+;; Don't defer screen updates when performing operations
+(setq redisplay-dont-pause t)
 
 (package-require 'base16-theme)
-;(package-require 'darkburn-theme)
-;(package-require 'cyberpunk-theme)
-;(load-theme 'darkburn t)
+(package-require 'darkburn-theme)
+(package-require 'cyberpunk-theme)
+(package-require 'monokai-theme)
+(package-require 'zenburn-theme)
 
-(load-theme 'base16-ashes t)
+(load-theme 'darkburn t)
+
 (provide 'sre-theme)
