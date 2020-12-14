@@ -47,8 +47,6 @@
         sre-editing
         sre-desktop
         sre-extension
-        sre-dired
-        sre-git
         sre-terminal
         sre-org
         sre-ido
@@ -59,7 +57,7 @@
         sre-js
         sre-csharp
         sre-yaml
-        sre-mail
+;        sre-mail
         sre-gpg
         sre-markdown))
 
@@ -81,8 +79,7 @@
  ;; If there is more than one, they won't work right.
  '(epg-gpg-program "/usr/local/MacGPG2/bin/gpg2")
  '(package-selected-packages
-   (quote
-    (zenburn-theme git-gutter-fringe monokai-theme auth-password-store pass lorem-ipsum applescript-mode epa-file shell-here password-store yaml-mode web-mode use-package typescript-mode smex scala-mode sbt-mode php-mode multiple-cursors mic-paren markdown-mode magit json-mode js2-mode ido-vertical-mode ido-ubiquitous helm-swoop helm-projectile helm-git-grep flycheck exec-path-from-shell editorconfig dired+ csharp-mode blank-mode base16-theme add-node-modules-path))))
+   '(zenburn-theme git-gutter-fringe monokai-theme auth-password-store pass lorem-ipsum applescript-mode epa-file shell-here password-store yaml-mode web-mode use-package typescript-mode smex scala-mode sbt-mode php-mode multiple-cursors mic-paren markdown-mode magit json-mode js2-mode ido-vertical-mode ido-ubiquitous helm-swoop helm-projectile helm-git-grep flycheck exec-path-from-shell editorconfig dired+ csharp-mode blank-mode base16-theme add-node-modules-path)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

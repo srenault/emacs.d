@@ -16,8 +16,9 @@
 (setq ido-use-virtual-buffers t)
 
 ;; Make sure ido is really everywhere
-(package-require 'ido-ubiquitous)
-(ido-ubiquitous-mode)
+(ido-everywhere 1)
+(package-require 'ido-completing-read+)
+(ido-ubiquitous-mode 1)
 
 ;; Use smex to provide ido-like interface for M-x
 (package-require 'smex)
