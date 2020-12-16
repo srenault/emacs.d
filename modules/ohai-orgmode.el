@@ -27,6 +27,7 @@
   :config
   ;; Stop org-mode from highjacking shift-cursor keys.
   (setq org-replace-disputed-keys t)
+  (global-set-key (kbd "C-c c") 'org-capture)
   ;; Always use visual-line-mode in org-mode, and wrap it at column 80.
   (add-hook
    'org-mode-hook

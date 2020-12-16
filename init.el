@@ -57,6 +57,9 @@ Your installed Emacs reports:
 ;; find our modules when we ask for them.
 (add-to-list 'load-path (concat dotfiles-dir "modules"))
 
+;; sre
+(add-to-list 'load-path (concat dotfiles-dir "sre"))
+
 ;; Define where we want to keep `loaddefs.el` (our autoload declarations) and
 ;; `custom.el` (our user settings file).
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
@@ -74,6 +77,9 @@ Your installed Emacs reports:
 (require 'ohai-personal-taste)
 (require 'ohai-startup-wizard)
 (require 'ohai-set-path)
+
+;; sre
+(require 'sre-init)
 
 ;; Load the enabled modules.
 (when (not (boundp 'ohai/wizard-did-run)) (ohai/load-modules))
