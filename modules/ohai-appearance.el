@@ -122,7 +122,7 @@
   (blink-cursor-mode -1))
 
 ;; Show line numbers in buffers.
-(global-linum-mode t)
+(global-display-line-numbers-mode)
 (setq linum-format (if (not window-system) "%4d " "%4d"))
 
 ;; Highlight the line number of the current line.

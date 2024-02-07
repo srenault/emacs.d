@@ -12,9 +12,17 @@
 
 (use-package web-mode
   :mode (("\\.jsx?$" . web-mode)
+         ("\\.tsx?$" . web-mode)
          ("\\.es6\\'" . web-mode)
          ("\\.js\\'" . web-mode)
          ("\\.ejs\\'" . web-mode)))
+
+(defun my-web-mode-hook ()
+  "Hooks for Web mode."
+  (setq web-mode-code-indent-offset 2)
+)
+
+(add-hook 'web-mode-hook  'my-web-mode-hook)
 
 ;; Enable clipboard
 (setq x-select-enable-clipboard t)
@@ -27,7 +35,6 @@
 
 (use-package helm
   :config
-  (require 'helm-config)
   (require 'helm)
   ;; Activate Helm.
   (helm-mode 1)
@@ -40,14 +47,9 @@
       :bind (("C-c f" . helm-projectile-find-file)
              ("C-c g" . helm-projectile-ag)))))
 
-(use-package projectile
-  :bind ("C-c f" . projectile-find-file))
-
 (use-package graphql-mode)
 
 (use-package typescript-mode)
-
-(use-package stylus-mode)
 
 (use-package multiple-cursors
   :bind (("C-S-c C-S-c" . mc/edit-lines)
@@ -89,7 +91,7 @@
 
 ;; pass
 (use-package pass)
-(use-package helm-pass)
+;(use-package helm-pass)
 
 (defun kill-other-buffers ()
   "Kill all other buffers."

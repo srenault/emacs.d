@@ -22,7 +22,6 @@
 
 (use-package helm
   :config
-  (require 'helm-config)
   (require 'helm)
   ;; Activate Helm.
   (helm-mode 1)
